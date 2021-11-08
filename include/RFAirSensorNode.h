@@ -1,21 +1,21 @@
 #pragma once
 
-#include "RFTemplateNode.h"
+#include "RFBaseNode.h"
 #include "SparkFunBME280.h"
 
-class RFExampleNode : public RFTemplateNode
+class RFAirSensorNode : public RFBaseNode
 {
 public:
-    RFExampleNode() = default;
+    RFAirSensorNode() = default;
 
     virtual void setup() override;
-
     virtual void work() override;
 
 protected:
-    void initRadio() override;
+
+    void initBME280();
     void readBME280();
 
 private:
-    BME280 _bme280;
+    BME280 bme280_;
 };

@@ -2,7 +2,7 @@
 
 #include <Arduino.h>
 
-#define DEGUB 1
+#define DEGUB 0
 
 #define PRINTD1(arg1) if(DEGUB == 1) Serial.print(arg1)
 #define PRINTD1F(arg1) if(DEGUB == 1) Serial.print(F(arg1))
